@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin:0px;
+}
+.wrapper {
+    height: 80vh;
+    width: 100vh;
+    background-color: bisque;
+    margin: 0 auto;
+    position: absolute;
+}
+
+
+.upper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: black solid 2px;
+    padding:70px;
+    position: relative;
+    height: 50%;
+}
+
+.logo {
+    background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg);
+    height: 80px;
+    width: 80px;    
+    border-radius: 90%;
+}
+
+.lower {
+    position: relative;
+    height: 50%;
+    padding: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.textbox {
+    margin-right: 20px;
+    text-align: justify;
+}
+
+

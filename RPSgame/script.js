@@ -1,0 +1,4 @@
+function alarm (){
+    alert("hello")
+}
+

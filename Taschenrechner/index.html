@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minirechner</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calc">
+
+            <div class="display">
+                <tr>
+                    <td><input class="display_inner" type="text" id="result"></td>
+                </tr>
+            </div>  
+                
+            <div class="numbers">
+                <div class="column">
+                    <tr>
+                        <td><input type="button" class="button" value="7" onclick="buttonClicked('7')"/></td>
+                        <td><input type="button" class="button" value="8" onclick="buttonClicked('8')"/></td>
+                        <td><input type="button" class="button" value="9" onclick="buttonClicked('9')"/></td>
+                        <td><input type="button" class="button_child" value="C" onclick="clr()"></td>
+                    </tr>
+                </div>
+
+                <div class="column">
+                    <tr>
+                        <td><input type="button" class="button" value="4" onclick="buttonClicked('4')"/></td>
+                        <td><input type="button" class="button" value="5" onclick="buttonClicked('5')"/></td>
+                        <td><input type="button" class="button" value="6" onclick="buttonClicked('6')"/></td>
+                        <td><input type="button" class="button_child" value="*" onclick="buttonClicked('*')"/></td>
+                    </tr>
+                </div>
+
+                <div class="column">
+                    <tr>
+                        <td><input type="button" class="button" value="1" onclick="buttonClicked('1')"/></td>
+                        <td><input type="button" class="button" value="2" onclick="buttonClicked('2')"/></td>
+                        <td><input type="button" class="button" value="3" onclick="buttonClicked('3')"/></td>
+                        <td><input type="button" class="button_child" value="/" onclick="buttonClicked('/')"/></td>
+                    </tr>
+                </div>
+
+                <div class="column">
+                    <tr>
+                        <td><input type="button" class="button_child" value="+" onclick="buttonClicked('+')"/></td>
+                        <td><input type="button" class="button" value="0" onclick="buttonClicked('0')"/></td>
+                        <td><input type="button" class="button_child" value="-" onclick="buttonClicked('-')"/></td>
+                        <td><input type="button" class="button_child" value="=" onclick="solve()"/></td>
+                    </tr>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+        
+
+
+</body>
+</html>
