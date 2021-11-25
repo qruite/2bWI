@@ -1,11 +1,11 @@
 const valid = [];
 const item = [0];
 var player;
-var bot;
-var index;
 var validNumber = 0;
 var playerItem = document.getElementById('player_item');
 var botItem = document.getElementById("bot_item");
+var botSelecion;
+var playerSelecion;
 
 function restart() {
     validNumber = 0;
@@ -31,34 +31,50 @@ function checkIfValid(){
 
 function changeHtml(){
     playerPick();
+
     setTimeout(function () {
         botPick();
-    }, 1000);    
+        
+        document.getElementById("result").innerHTML = "Loading";
+
+        setTimeout(function() {
+            checkWhoIsWinner();
+        }, 1000)
+
+    }, 500);    
+}
+
+function checkWhoIsWinner(){
+    if (botSelecion == playerSelecion) {
+        document.getElementById("result").innerHTML = "Draw"
+    } 
+
+
 }
 
 function playerPick() {
     if (index == 0) {
-       player = 0;
-       playerItem.innerHTML += addImgRock();
+        playerSelecion = 0;
+        playerItem.innerHTML += addImgRock();
    } else if (index == 1) {
-       player = 1;
-       playerItem.innerHTML += addImgPaper();
+        playerSelecion = 1;
+        playerItem.innerHTML += addImgPaper();
    } else if (index == 2){
-       player = 2;
-       playerItem.innerHTML += addImgScissors();
+        playerSelecion = 2;
+        playerItem.innerHTML += addImgScissors();
    }
 }
 
 function botPick(){
     let a = Math.floor(Math.random() * 3);
         if(a == 0){
-            bot = 0;
+            botSelecion = 0;
             document.getElementById("bot_item").innerHTML += addImgRock();
         }else if (a == 1) {
-            bot = 1;
+            botSelecion = 1;
             document.getElementById("bot_item").innerHTML += addImgPaper();
         } else if (a == 2) {
-            bot = 2;
+            botSelecion = 2;
             document.getElementById("bot_item").innerHTML += addImgScissors();
         }
 }
