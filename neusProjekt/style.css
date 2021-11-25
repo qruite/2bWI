@@ -114,40 +114,4 @@ body {
 .nameOfThePlayer {
     width: 85px;
 }
-
-/* if(count = 0) {
-        number++;
-        insertImgRock();
-    } else if (count = 1){
-        insertImgPaper()
-    } else if (count = 2){
-        insertImgScissors()
-    } else {
-        alert("please cleare the field!");
-    }
-
-    function addItemPaper() {
-    items.push(number);
-    checkIfCorrect();
-    insertImg(1);
-}
-
-function addItemScissors() {
-    items.push(number);
-    checkIfCorrect();
-    insertImg(2);
-}
-
-
-
-
-function addText(element){
-    let index = element.attributes["data-index"].value;
-    if (index == 1){
-        alert("1");
-    } else if (index == 2){
-        alert("2");
-    } else {
-        alert("idi nahui")
-    }
-}   
+ 
